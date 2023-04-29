@@ -439,16 +439,22 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /productos/{filtros}:
+  /productos/:
     get:
       tags:
         - / > productos
       summary: Devuelve todos los productos
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /productos/{filtros}:
+    get:
+      tags:
+        - / > productos
+      summary: Devuelve todos los productos Copy
       parameters:
-        - name: ''
-          in: query
-          schema:
-            type: string
         - name: filtros
           in: path
           schema:

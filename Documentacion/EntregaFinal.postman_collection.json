@@ -475,6 +475,101 @@
 					]
 				},
 				{
+					"name": "Eliminar un producto / varios / todos los productos Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi/:id?",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi",
+								":id"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar un producto / varios / todos los productos",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productosApi/",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productosApi",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "38"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:52:26 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
+						}
+					]
+				},
+				{
 					"name": "Eliminar un producto / varios / todos los productos",
 					"request": {
 						"method": "DELETE",
@@ -823,7 +918,29 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://alansitio.up.railway.app/productos/:filtros?",
+									"raw": "https://alansitio.up.railway.app/productos/",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Devuelve todos los productos Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productos/:filtros",
 									"protocol": "https",
 									"host": [
 										"alansitio",
@@ -834,12 +951,6 @@
 									"path": [
 										"productos",
 										":filtros"
-									],
-									"query": [
-										{
-											"key": "",
-											"value": null
-										}
 									],
 									"variable": [
 										{
