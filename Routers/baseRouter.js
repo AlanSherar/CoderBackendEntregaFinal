@@ -18,9 +18,13 @@ baseRouter.get("/info", Controller.checkAuthentication, Controller.getInfo )
 baseRouter.get("/productos/:filtros?", Controller.checkAuthentication, Controller.getProds)
 
 baseRouter.get("/carrito", Controller.checkAuthentication, Controller.getCarrito)
+baseRouter.get("/carrito/comprar", Controller.checkAuthentication, Controller.getCarritoComprar)
+// Links del front = GET
 baseRouter.get("/carrito/addProd/:prodId", Controller.checkAuthentication, Controller.getCarritoAddProd)
 baseRouter.get("/carrito/delProd/:prodId", Controller.checkAuthentication, Controller.getCarritoDelProd)
-baseRouter.get("/carrito/comprar", Controller.checkAuthentication, Controller.getCarritoComprar)
+// Postman = PUT || GET
+baseRouter.put("/carrito/addProd/:prodId", Controller.checkAuthentication, Controller.getCarritoAddProd)
+baseRouter.put("/carrito/delProd/:prodId", Controller.checkAuthentication, Controller.getCarritoDelProd)
 
 baseRouter.get("/perfil", Controller.checkAuthentication, Controller.getPerfil)
 

@@ -5,22 +5,221 @@ info:
 servers:
   - url: https://alansitio.up.railway.app
 tags:
-  - name: /productosApi
-  - name: /
-  - name: / > signIn
-  - name: / > logIn
-  - name: / > index
-  - name: / > productos
-  - name: / > carrito
-  - name: / > perfil
-  - name: / > info
-  - name: / > logout
+  - name: Router Base
+  - name: Router Base > signIn
+  - name: Router Base > logIn
+  - name: Router Base > index
+  - name: Router Base > productos
+  - name: Router Base > carrito
+  - name: Router Base > perfil
+  - name: Router Base > info
+  - name: Router Base > logout
+  - name: Router ProductosApi
 paths:
+  /signin:
+    get:
+      tags:
+        - Router Base > signIn
+      summary: Pagina de registro
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Router Base > signIn
+      summary: Crear cuenta
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: entregaFinal@gmail.com
+                password: asd
+                nombre: testing
+                apellido: test
+                edad: 18
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /failSignin:
+    get:
+      tags:
+        - Router Base > signIn
+      summary: Al fallar el signin
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /login:
+    get:
+      tags:
+        - Router Base > logIn
+      summary: Pagina de logueo
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Router Base > logIn
+      summary: Loguear cuenta
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: entregaFinal@gmail.com
+                password: asd
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /failLogin:
+    get:
+      tags:
+        - Router Base > logIn
+      summary: Al fallar el login
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /:
+    get:
+      tags:
+        - Router Base > index
+      summary: Acceder a index
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /productos/:
+    get:
+      tags:
+        - Router Base > productos
+      summary: Devuelve todos los productos
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /productos/{filtros}:
+    get:
+      tags:
+        - Router Base > productos
+      summary: Devuelve productos segun el filtro
+      parameters:
+        - name: filtros
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito:
+    get:
+      tags:
+        - Router Base > carrito
+      summary: Devuelve el carrito
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito/addProd/{id}:
+    put:
+      tags:
+        - Router Base > carrito
+      summary: Añade un producto al carrito
+      requestBody:
+        content: {}
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito/delProd/{id}:
+    put:
+      tags:
+        - Router Base > carrito
+      summary: Elimina un producto del carrito
+      requestBody:
+        content: {}
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito/comprar:
+    get:
+      tags:
+        - Router Base > carrito
+      summary: Realizar pedido de compra
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /perfil:
+    get:
+      tags:
+        - Router Base > perfil
+      summary: Informacion del usuario
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /info:
+    get:
+      tags:
+        - Router Base > info
+      summary: Informacion del server
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /logout:
+    get:
+      tags:
+        - Router Base > logout
+      summary: Desloguear session activa
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
   /productosApi:
     post:
       tags:
-        - /productosApi
-      summary: Crear uno / varios productos
+        - Router ProductosApi
+      summary: Crear uno o varios productos
       requestBody:
         content:
           application/json:
@@ -84,7 +283,7 @@ paths:
                 __v: 0
     get:
       tags:
-        - /productosApi
+        - Router ProductosApi
       summary: Recuperar todos los productos
       responses:
         '200':
@@ -168,7 +367,7 @@ paths:
   /productosApi/{id}:
     get:
       tags:
-        - /productosApi
+        - Router ProductosApi
       summary: Recuperar el producto actualizado
       parameters:
         - name: id
@@ -227,7 +426,7 @@ paths:
                 _id: 644d613a0fe707829994895e
     put:
       tags:
-        - /productosApi
+        - Router ProductosApi
       summary: Actualizar un producto
       requestBody:
         content:
@@ -296,8 +495,8 @@ paths:
                 matchedCount: 1
     delete:
       tags:
-        - /productosApi
-      summary: Eliminar un producto / varios / todos los productos
+        - Router ProductosApi
+      summary: Eliminar un producto o varios los productos
       parameters:
         - name: id
           in: path
@@ -352,8 +551,8 @@ paths:
   /productosApi/:
     delete:
       tags:
-        - /productosApi
-      summary: Eliminar un producto / varios / todos los productos Copy
+        - Router ProductosApi
+      summary: Eliminar todos los productos
       responses:
         '200':
           description: OK
@@ -399,197 +598,3 @@ paths:
               example:
                 acknowledged: true
                 deletedCount: 1
-  /signin:
-    get:
-      tags:
-        - / > signIn
-      summary: Pagina de registro
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    post:
-      tags:
-        - / > signIn
-      summary: Crear cuenta invalida
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example:
-                username: entregaFinal@gmail.com
-                password: ASD
-                nombre: test
-                edad: 18
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /failSignin:
-    get:
-      tags:
-        - / > signIn
-      summary: Al fallar el signin
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /login:
-    get:
-      tags:
-        - / > logIn
-      summary: Pagina de logueo
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-    post:
-      tags:
-        - / > logIn
-      summary: Loguear cuenta invalida
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example:
-                username: entrega@gmail.com
-                password: ASD
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /failLogin:
-    get:
-      tags:
-        - / > logIn
-      summary: Al fallar el login
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /:
-    get:
-      tags:
-        - / > index
-      summary: Render index
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /productos/:
-    get:
-      tags:
-        - / > productos
-      summary: Devuelve todos los productos
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /productos/{filtros}:
-    get:
-      tags:
-        - / > productos
-      summary: Devuelve productos segun el filtro
-      parameters:
-        - name: filtros
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /carrito:
-    get:
-      tags:
-        - / > carrito
-      summary: Devuelve el carrito
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /carrito/addProd/{id}:
-    get:
-      tags:
-        - / > carrito
-      summary: Añade producto al carrito
-      parameters:
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /carrito/delProd/{id}:
-    get:
-      tags:
-        - / > carrito
-      summary: Elimina producto del carrito
-      parameters:
-        - name: id
-          in: path
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /carrito/comprar:
-    get:
-      tags:
-        - / > carrito
-      summary: Realizar pedido de compra
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /perfil:
-    get:
-      tags:
-        - / > perfil
-      summary: Informacion del usuario
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /info:
-    get:
-      tags:
-        - / > info
-      summary: Informacion del server
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /logout:
-    get:
-      tags:
-        - / > logout
-      summary: Desloguear session activa
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}

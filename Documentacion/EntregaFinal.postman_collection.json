@@ -7,10 +7,434 @@
 	},
 	"item": [
 		{
-			"name": "/productosApi",
+			"name": "Router Base",
 			"item": [
 				{
-					"name": "Crear uno / varios productos",
+					"name": "signIn",
+					"item": [
+						{
+							"name": "Pagina de registro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/signin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear cuenta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"entregaFinal@gmail.com\",\r\n    \"password\" : \"asd\",\r\n    \"nombre\" : \"testing\",\r\n    \"apellido\" : \"test\",\r\n    \"edad\" : 18\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/signin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Al fallar el signin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/failSignin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"failSignin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "logIn",
+					"item": [
+						{
+							"name": "Pagina de logueo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/login",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Loguear cuenta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"entregaFinal@gmail.com\",\r\n    \"password\": \"asd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/login",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Al fallar el login",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/failLogin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"failLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "index",
+					"item": [
+						{
+							"name": "Acceder a index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "productos",
+					"item": [
+						{
+							"name": "Devuelve todos los productos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productos/",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Devuelve productos segun el filtro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productos/:filtros",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productos",
+										":filtros"
+									],
+									"variable": [
+										{
+											"key": "filtros",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "carrito",
+					"item": [
+						{
+							"name": "Devuelve el carrito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Añade un producto al carrito",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito/addProd/:id",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito",
+										"addProd",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina un producto del carrito",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito/delProd/:id",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito",
+										"delProd",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Realizar pedido de compra",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito/comprar",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito",
+										"comprar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "perfil",
+					"item": [
+						{
+							"name": "Informacion del usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/perfil",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"perfil"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "info",
+					"item": [
+						{
+							"name": "Informacion del server",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/info",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"info"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"item": [
+						{
+							"name": "Desloguear session activa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/logout",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Router ProductosApi",
+			"item": [
+				{
+					"name": "Crear uno o varios productos",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -475,90 +899,7 @@
 					]
 				},
 				{
-					"name": "Eliminar un producto / varios / todos los productos Copy",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "https://alansitio.up.railway.app/productosApi/",
-							"protocol": "https",
-							"host": [
-								"alansitio",
-								"up",
-								"railway",
-								"app"
-							],
-							"path": [
-								"productosApi",
-								""
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Eliminar un producto / varios / todos los productos",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/productosApi/",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"productosApi",
-										""
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "x-powered-by",
-									"value": "Express"
-								},
-								{
-									"key": "content-type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "content-length",
-									"value": "38"
-								},
-								{
-									"key": "etag",
-									"value": "W/\"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE\""
-								},
-								{
-									"key": "set-cookie",
-									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT"
-								},
-								{
-									"key": "vary",
-									"value": "Accept-Encoding"
-								},
-								{
-									"key": "date",
-									"value": "Sat, 29 Apr 2023 20:52:26 GMT"
-								},
-								{
-									"key": "server",
-									"value": "railway"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
-						}
-					]
-				},
-				{
-					"name": "Eliminar un producto / varios / todos los productos",
+					"name": "Eliminar un producto o varios los productos",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -645,236 +986,35 @@
 							"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
 						}
 					]
-				}
-			]
-		},
-		{
-			"name": "/",
-			"item": [
-				{
-					"name": "signIn",
-					"item": [
-						{
-							"name": "Pagina de registro",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/signin",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"signin"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Crear cuenta valida",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\" : \"entregaFinal@gmail.com\",\r\n    \"password\" : \"ASD\",\r\n    \"nombre\" : \"test\",\r\n    \"edad\" : 18\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://alansitio.up.railway.app/signin",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"signin"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Crear cuenta invalida",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\" : \"entregaFinal@gmail.com\",\r\n    \"password\" : \"ASD\",\r\n    \"nombre\" : \"test\",\r\n    \"edad\" : 18\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://alansitio.up.railway.app/signin",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"signin"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Al fallar el signin",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/failSignin",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"failSignin"
-									]
-								}
-							},
-							"response": []
-						}
-					]
 				},
 				{
-					"name": "logIn",
-					"item": [
-						{
-							"name": "Pagina de logueo",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/login",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"login"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Loguear cuenta valida",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"alan@gmail.com\",\r\n    \"password\": \"asd\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://alansitio.up.railway.app/login",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"login"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Loguear cuenta invalida",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"entrega@gmail.com\",\r\n    \"password\": \"ASD\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://alansitio.up.railway.app/login",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"login"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Al fallar el login",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/failLogin",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"failLogin"
-									]
-								}
-							},
-							"response": []
+					"name": "Eliminar todos los productos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi/",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi",
+								""
+							]
 						}
-					]
-				},
-				{
-					"name": "index",
-					"item": [
+					},
+					"response": [
 						{
-							"name": "Render index",
-							"request": {
-								"method": "GET",
+							"name": "Eliminar un producto / varios / todos los productos",
+							"originalRequest": {
+								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "https://alansitio.up.railway.app/",
+									"raw": "https://alansitio.up.railway.app/productosApi/",
 									"protocol": "https",
 									"host": [
 										"alansitio",
@@ -883,250 +1023,50 @@
 										"app"
 									],
 									"path": [
+										"productosApi",
 										""
 									]
 								}
 							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "productos",
-					"item": [
-						{
-							"name": "Devuelve todos los productos",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/productos/",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"productos",
-										""
-									]
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "38"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:52:26 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
 								}
-							},
-							"response": []
-						},
-						{
-							"name": "Devuelve productos segun el filtro",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/productos/:filtros",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"productos",
-										":filtros"
-									],
-									"variable": [
-										{
-											"key": "filtros",
-											"value": null
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "carrito",
-					"item": [
-						{
-							"name": "Devuelve el carrito",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/carrito",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"carrito"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Añade producto al carrito",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/carrito/addProd/:id",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"carrito",
-										"addProd",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": null
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Elimina producto del carrito",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/carrito/delProd/:id",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"carrito",
-										"delProd",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": null
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Realizar pedido de compra",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/carrito/comprar",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"carrito",
-										"comprar"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "perfil",
-					"item": [
-						{
-							"name": "Informacion del usuario",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/perfil",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"perfil"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "info",
-					"item": [
-						{
-							"name": "Informacion del server",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/info",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"info"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "logout",
-					"item": [
-						{
-							"name": "Desloguear session activa",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://alansitio.up.railway.app/logout",
-									"protocol": "https",
-									"host": [
-										"alansitio",
-										"up",
-										"railway",
-										"app"
-									],
-									"path": [
-										"logout"
-									]
-								}
-							},
-							"response": []
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
 						}
 					]
 				}
