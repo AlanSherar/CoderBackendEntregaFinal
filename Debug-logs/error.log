@@ -1,0 +1,71 @@
+[2023-04-29T14:08:32.714] [ERROR] error - CastError: Cast to ObjectId failed for value "id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\query.js:4933:21)
+    at model.Query.Query.then (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\query.js:5032:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"id"',
+  kind: 'ObjectId',
+  value: 'id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\lib\query.js:5363:12),
+  valueType: 'string'
+}
+[2023-04-29T14:14:17.897] [ERROR] error - MongoExpiredSessionError: Cannot use a session that has ended
+    at applySession (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\sessions.js:655:16)
+    at Connection.command (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection.js:294:53)
+    at E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\sdam\server.js:208:18
+    at Object.callback (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:327:13)
+    at ConnectionPool.processWaitQueue (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:506:33)
+    at E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cmap\connection_pool.js:207:37
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-04-29T14:14:52.649] [ERROR] error - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\utils.js:338:21)
+    at executeOperation (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at FindCursor.[kInit] (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:444:14)
+    at next (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:512:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-04-29T14:15:48.042] [ERROR] error - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\utils.js:338:21)
+    at executeOperation (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at FindCursor.[kInit] (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:444:14)
+    at next (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:512:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-04-29T14:18:59.199] [ERROR] error - MongoNotConnectedError: Client must be connected before running operations
+    at executeOperationAsync (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:24:19)
+    at E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:45
+    at maybeCallback (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\utils.js:338:21)
+    at executeOperation (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\operations\execute_operation.js:12:38)
+    at FindCursor._initialize (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\find_cursor.js:54:50)
+    at FindCursor.[kInit] (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:444:14)
+    at next (E:\CODER-HOUSE\Cursos\Programacion-Backend\EntregaDesafios\Entregas\EntregaFinal\node_modules\mongoose\node_modules\mongodb\lib\cursor\abstract_cursor.js:512:22)
+    at node:internal/util:364:7
+    at new Promise (<anonymous>)
+    at next (node:internal/util:350:12) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
