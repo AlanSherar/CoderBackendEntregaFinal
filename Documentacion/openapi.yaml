@@ -165,177 +165,17 @@ paths:
                   tags:
                     - cocina
                   _id: 644d82e656762f63d46add01
-  /productosApi/644d82e656762f63d46add01:
-    get:
-      tags:
-        - /productosApi
-      summary: Recuperar un producto
-      responses:
-        '200':
-          description: OK
-          headers:
-            x-powered-by:
-              schema:
-                type: string
-                example: Express
-            content-type:
-              schema:
-                type: string
-                example: application/json; charset=utf-8
-            content-length:
-              schema:
-                type: integer
-                example: '141'
-            etag:
-              schema:
-                type: string
-                example: W/"8d-hni+SaA5ifydzhzrVH/YLwS1tgk"
-            set-cookie:
-              schema:
-                type: string
-                example: >-
-                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
-                  Path=/; Expires=Sat, 29 Apr 2023 21:00:26 GMT
-            vary:
-              schema:
-                type: string
-                example: Accept-Encoding
-            date:
-              schema:
-                type: string
-                example: Sat, 29 Apr 2023 20:50:26 GMT
-            server:
-              schema:
-                type: string
-                example: railway
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                titulo: Producto Postman
-                precio: 10500
-                thumbnail: https://loremflickr.com/640/480
-                tags:
-                  - cocina
-                _id: 644d82e656762f63d46add01
-    delete:
-      tags:
-        - /productosApi
-      summary: Eliminar un producto / varios / todos los productos
-      responses:
-        '200':
-          description: OK
-          headers:
-            x-powered-by:
-              schema:
-                type: string
-                example: Express
-            content-type:
-              schema:
-                type: string
-                example: application/json; charset=utf-8
-            content-length:
-              schema:
-                type: integer
-                example: '38'
-            etag:
-              schema:
-                type: string
-                example: W/"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE"
-            set-cookie:
-              schema:
-                type: string
-                example: >-
-                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
-                  Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT
-            vary:
-              schema:
-                type: string
-                example: Accept-Encoding
-            date:
-              schema:
-                type: string
-                example: Sat, 29 Apr 2023 20:52:26 GMT
-            server:
-              schema:
-                type: string
-                example: railway
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                acknowledged: true
-                deletedCount: 1
-  /productosApi/644d613a0fe707829994895e:
-    put:
-      tags:
-        - /productosApi
-      summary: Actualizar un producto
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example:
-                titulo: Handcrafted Granite PUT POSTMAN
-                precio: 1111
-                thumbnail: https://loremflickr.com/640/480
-                tags:
-                  - deporte
-      responses:
-        '200':
-          description: OK
-          headers:
-            x-powered-by:
-              schema:
-                type: string
-                example: Express
-            content-type:
-              schema:
-                type: string
-                example: application/json; charset=utf-8
-            content-length:
-              schema:
-                type: integer
-                example: '92'
-            etag:
-              schema:
-                type: string
-                example: W/"5c-XE4LqSKK8lMBgnDPfq7vp2yCSG8"
-            set-cookie:
-              schema:
-                type: string
-                example: >-
-                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
-                  Path=/; Expires=Sat, 29 Apr 2023 21:01:20 GMT
-            vary:
-              schema:
-                type: string
-                example: Accept-Encoding
-            date:
-              schema:
-                type: string
-                example: Sat, 29 Apr 2023 20:51:20 GMT
-            server:
-              schema:
-                type: string
-                example: railway
-          content:
-            application/json:
-              schema:
-                type: object
-              example:
-                acknowledged: true
-                modifiedCount: 1
-                upsertedId: null
-                upsertedCount: 0
-                matchedCount: 1
+  /productosApi/{id}:
     get:
       tags:
         - /productosApi
       summary: Recuperar el producto actualizado
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: OK
@@ -385,6 +225,134 @@ paths:
                 tags:
                   - deporte
                 _id: 644d613a0fe707829994895e
+    put:
+      tags:
+        - /productosApi
+      summary: Actualizar un producto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                titulo: Handcrafted Granite PUT POSTMAN
+                precio: 1111
+                thumbnail: https://loremflickr.com/640/480
+                tags:
+                  - deporte
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '92'
+            etag:
+              schema:
+                type: string
+                example: W/"5c-XE4LqSKK8lMBgnDPfq7vp2yCSG8"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:01:20 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:51:20 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                acknowledged: true
+                modifiedCount: 1
+                upsertedId: null
+                upsertedCount: 0
+                matchedCount: 1
+    delete:
+      tags:
+        - /productosApi
+      summary: Eliminar un producto / varios / todos los productos
+      parameters:
+        - name: ''
+          in: query
+          schema:
+            type: string
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '38'
+            etag:
+              schema:
+                type: string
+                example: W/"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:52:26 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                acknowledged: true
+                deletedCount: 1
   /signin:
     get:
       tags:
@@ -471,21 +439,21 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /productos:
+  /productos/{filtros}:
     get:
       tags:
         - / > productos
       summary: Devuelve todos los productos
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /productos/deporte,cocina:
-    get:
-      tags:
-        - / > productos
-      summary: Devuelve productos segun filtro
+      parameters:
+        - name: ''
+          in: query
+          schema:
+            type: string
+        - name: filtros
+          in: path
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: Successful response
@@ -501,21 +469,33 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /carrito/addProd/644d82e656762f63d46add01:
+  /carrito/addProd/{id}:
     get:
       tags:
         - / > carrito
       summary: Añade producto al carrito
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
-  /carrito/delProd/644d82e656762f63d46add01:
+  /carrito/delProd/{id}:
     get:
       tags:
         - / > carrito
       summary: Elimina producto del carrito
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: Successful response
