@@ -299,15 +299,61 @@ paths:
         - /productosApi
       summary: Eliminar un producto / varios / todos los productos
       parameters:
-        - name: ''
-          in: query
-          schema:
-            type: string
         - name: id
           in: path
           schema:
             type: string
           required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '38'
+            etag:
+              schema:
+                type: string
+                example: W/"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:52:26 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                acknowledged: true
+                deletedCount: 1
+  /productosApi/:
+    delete:
+      tags:
+        - /productosApi
+      summary: Eliminar un producto / varios / todos los productos Copy
       responses:
         '200':
           description: OK
@@ -453,7 +499,7 @@ paths:
     get:
       tags:
         - / > productos
-      summary: Devuelve todos los productos Copy
+      summary: Devuelve productos segun el filtro
       parameters:
         - name: filtros
           in: path
