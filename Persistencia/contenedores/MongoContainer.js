@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 import { mongoConfig } from "../../Config/mongoConfig.js"
-import { Logger } from "../../src/logger.js"
+import { Logger } from "../../src/Logger.js"
 
 export class MongoContainer{
   constructor(){

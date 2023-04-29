@@ -1,4 +1,4 @@
-import { Logger } from "../../src/logger.js"
+import { Logger } from "../../src/Logger.js"
 import { getMensajesDTO } from "../DTOs/MensajesDTO.js"
 import { MensajesDAOFactory } from "../Factory/MensajesDAOFactory.js"
 

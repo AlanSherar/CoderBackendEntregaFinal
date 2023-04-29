@@ -5,7 +5,7 @@ import os from "os"
 import { CarritosRepo } from "../Persistencia/Repository/CarritosRepository.js"
 import { gmailSender } from "../src/Nodemailer.js"
 import { mailerAuth } from "../Config/nodemailerEmail.js"
-import { Logger } from "../src/logger.js"
+import { Logger } from "../src/Logger.js"
 
 // const MensajesRepo = MensajesDAOFactory.getDAO()
 // const ProductosRepo = ProductosDAOFactory.getDAO()

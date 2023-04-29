@@ -1,8 +1,7 @@
 import Service from "../Service/Service.js"
 import { prodService } from "../Service/ProdService.js"
-import { Logger } from "../src/logger.js";
+import { Logger } from "../src/Logger.js";
 import { io } from "../server.js"
-import { gmailSender } from "../src/Nodemailer.js";
 
 // AUTH
 async function checkAuthentication(req, res, next) {
