@@ -44,6 +44,6 @@ app.use(passportController.session())
 app.use("/productosApi", productosApiRouter)
 app.use("/", baseRouter)
 
-io.on('connection', Controller.webSocket)
-
 httpServer.listen(PUERTO, () => Logger.logConsola.info(`Server ON. Port: ${PUERTO}`))
+
+io.on('connection', Controller.webSocket)
