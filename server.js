@@ -12,7 +12,7 @@ import productosApiRouter from "./Routers/productosApiRouter.js"
 import baseRouter from "./Routers/baseRouter.js"
 import { Controller } from "./Controller/controller.js"
 
-const PUERTO = process.env.port || DOT_ENV.PORT
+const PUERTO = process.env.PORT || DOT_ENV.PORT
 const app = express()
 const httpServer = new Server(app)
 
@@ -44,6 +44,6 @@ app.use(passportController.session())
 app.use("/productosApi", productosApiRouter)
 app.use("/", baseRouter)
 
-httpServer.listen(PUERTO, () => Logger.logConsola.info(`Server ON. Port: ${PUERTO}`))
-
 io.on('connection', Controller.webSocket)
+
+httpServer.listen(PUERTO, () => Logger.logConsola.info(`Server ON. Port: ${PUERTO}`))

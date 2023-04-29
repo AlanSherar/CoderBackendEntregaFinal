@@ -6,11 +6,12 @@ const { mode, port, debug, dao, _ } = yargs
   .alias({
     m: "mode",
     p: "port",
-    d: "debug"
+    d: "debug",
+    D: "dao"
   })
-  .boolean("DEBUG")
+  .boolean("debug")
   .default({
-    mode: "DEV",
+    mode: "PROD",
     port: 3000,
     debug: false,
     dao: "MONGO"
