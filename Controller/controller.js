@@ -140,7 +140,7 @@ async function getCarritoAddProd(req, res) {
     const userId = req.user.email
     const { prodId } = req.params
 
-    Service.carritoAddProd(userId, prodId)
+    await Service.carritoAddProd(userId, prodId)
 
     return res.redirect("/productos")
     } catch (error) {
@@ -166,7 +166,7 @@ async function getCarritoComprar(req, res){
     const userId = user.email
     const carrito = await Service.getCarrito({userId})
     if (carrito) {
-      Service.carritoComprar( carrito, user )
+      await Service.carritoComprar( carrito, user )
     }
     return res.redirect("/carrito")
   } catch (error) {
