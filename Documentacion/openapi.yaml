@@ -1,0 +1,563 @@
+openapi: 3.0.0
+info:
+  title: EntregaFinal
+  version: 1.0.0
+servers:
+  - url: https://alansitio.up.railway.app
+tags:
+  - name: /productosApi
+  - name: /
+  - name: / > signIn
+  - name: / > logIn
+  - name: / > index
+  - name: / > productos
+  - name: / > carrito
+  - name: / > perfil
+  - name: / > info
+  - name: / > logout
+paths:
+  /productosApi:
+    post:
+      tags:
+        - /productosApi
+      summary: Crear uno / varios productos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                titulo: Producto Postman
+                precio: 10500
+                thumbnail: https://loremflickr.com/640/480
+                tags:
+                  - cocina
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '149'
+            etag:
+              schema:
+                type: string
+                example: W/"95-ZI9BNyG+r6+GI7wLwaOzPcgr2bA"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 20:59:43 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:49:43 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                titulo: Producto Postman
+                precio: 10500
+                thumbnail: https://loremflickr.com/640/480
+                tags:
+                  - cocina
+                _id: 644d82e656762f63d46add01
+                __v: 0
+    get:
+      tags:
+        - /productosApi
+      summary: Recuperar todos los productos
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '884'
+            etag:
+              schema:
+                type: string
+                example: W/"374-0On1dTY7ZLq7npbUZl3Urr4deBA"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:00:04 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:50:04 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - titulo: Handcrafted Granite Towels
+                  precio: 9370
+                  thumbnail: https://loremflickr.com/640/480
+                  tags:
+                    - deporte
+                  _id: 644d613a0fe707829994895e
+                - titulo: Awesome Frozen Car
+                  precio: 8771
+                  thumbnail: https://loremflickr.com/640/480
+                  tags:
+                    - educacion
+                  _id: 644d613a0fe707829994895f
+                - titulo: Electronic Plastic Chicken
+                  precio: 4953
+                  thumbnail: https://loremflickr.com/640/480
+                  tags:
+                    - casual
+                  _id: 644d613a0fe7078299948960
+                - titulo: Tasty Plastic Towels
+                  precio: 6148
+                  thumbnail: https://loremflickr.com/640/480
+                  tags:
+                    - formal
+                  _id: 644d613a0fe7078299948961
+                - titulo: Intelligent Soft Mouse
+                  precio: 6552
+                  thumbnail: https://loremflickr.com/640/480
+                  tags:
+                    - cocina
+                  _id: 644d613a0fe7078299948962
+                - titulo: Producto Postman
+                  precio: 10500
+                  thumbnail: https://loremflickr.com/640/480
+                  tags:
+                    - cocina
+                  _id: 644d82e656762f63d46add01
+  /productosApi/644d82e656762f63d46add01:
+    get:
+      tags:
+        - /productosApi
+      summary: Recuperar un producto
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '141'
+            etag:
+              schema:
+                type: string
+                example: W/"8d-hni+SaA5ifydzhzrVH/YLwS1tgk"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:00:26 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:50:26 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                titulo: Producto Postman
+                precio: 10500
+                thumbnail: https://loremflickr.com/640/480
+                tags:
+                  - cocina
+                _id: 644d82e656762f63d46add01
+    delete:
+      tags:
+        - /productosApi
+      summary: Eliminar un producto / varios / todos los productos
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '38'
+            etag:
+              schema:
+                type: string
+                example: W/"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:52:26 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                acknowledged: true
+                deletedCount: 1
+  /productosApi/644d613a0fe707829994895e:
+    put:
+      tags:
+        - /productosApi
+      summary: Actualizar un producto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                titulo: Handcrafted Granite PUT POSTMAN
+                precio: 1111
+                thumbnail: https://loremflickr.com/640/480
+                tags:
+                  - deporte
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '92'
+            etag:
+              schema:
+                type: string
+                example: W/"5c-XE4LqSKK8lMBgnDPfq7vp2yCSG8"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:01:20 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:51:20 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                acknowledged: true
+                modifiedCount: 1
+                upsertedId: null
+                upsertedCount: 0
+                matchedCount: 1
+    get:
+      tags:
+        - /productosApi
+      summary: Recuperar el producto actualizado
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-powered-by:
+              schema:
+                type: string
+                example: Express
+            content-type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            content-length:
+              schema:
+                type: integer
+                example: '156'
+            etag:
+              schema:
+                type: string
+                example: W/"9c-C7JmfzjRtL6bD87L4lAnXmx+7s8"
+            set-cookie:
+              schema:
+                type: string
+                example: >-
+                  connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18;
+                  Path=/; Expires=Sat, 29 Apr 2023 21:01:42 GMT
+            vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            date:
+              schema:
+                type: string
+                example: Sat, 29 Apr 2023 20:51:42 GMT
+            server:
+              schema:
+                type: string
+                example: railway
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                titulo: Handcrafted Granite PUT POSTMAN
+                precio: 1111
+                thumbnail: https://loremflickr.com/640/480
+                tags:
+                  - deporte
+                _id: 644d613a0fe707829994895e
+  /signin:
+    get:
+      tags:
+        - / > signIn
+      summary: Pagina de registro
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - / > signIn
+      summary: Crear cuenta invalida
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: entregaFinal@gmail.com
+                password: ASD
+                nombre: test
+                edad: 18
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /failSignin:
+    get:
+      tags:
+        - / > signIn
+      summary: Al fallar el signin
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /login:
+    get:
+      tags:
+        - / > logIn
+      summary: Pagina de logueo
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - / > logIn
+      summary: Loguear cuenta invalida
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: entrega@gmail.com
+                password: ASD
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /failLogin:
+    get:
+      tags:
+        - / > logIn
+      summary: Al fallar el login
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /:
+    get:
+      tags:
+        - / > index
+      summary: Render index
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /productos:
+    get:
+      tags:
+        - / > productos
+      summary: Devuelve todos los productos
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /productos/deporte,cocina:
+    get:
+      tags:
+        - / > productos
+      summary: Devuelve productos segun filtro
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito:
+    get:
+      tags:
+        - / > carrito
+      summary: Devuelve el carrito
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito/addProd/644d82e656762f63d46add01:
+    get:
+      tags:
+        - / > carrito
+      summary: Añade producto al carrito
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito/delProd/644d82e656762f63d46add01:
+    get:
+      tags:
+        - / > carrito
+      summary: Elimina producto del carrito
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /carrito/comprar:
+    get:
+      tags:
+        - / > carrito
+      summary: Realizar pedido de compra
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /perfil:
+    get:
+      tags:
+        - / > perfil
+      summary: Informacion del usuario
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /info:
+    get:
+      tags:
+        - / > info
+      summary: Informacion del server
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /logout:
+    get:
+      tags:
+        - / > logout
+      summary: Desloguear session activa
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

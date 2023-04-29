@@ -11,6 +11,8 @@ import { passportController } from "./Controller/Passport/passportController.js"
 import productosApiRouter from "./Routers/productosApiRouter.js"
 import baseRouter from "./Routers/baseRouter.js"
 import { Controller } from "./Controller/controller.js"
+import swaggerUi from "swagger-ui-express"
+import { swaggerSpecs } from "./Config/documentacion.js"
 
 const PUERTO = process.env.PORT || DOT_ENV.PORT
 const app = express()
@@ -41,9 +43,9 @@ app.use(session({
 }))
 app.use(passportController.session())
 
+app.use("/api/docu", swaggerUi.serve, swaggerUi.setup(swaggerSpecs))
 app.use("/productosApi", productosApiRouter)
 app.use("/", baseRouter)
-
 httpServer.listen(PUERTO, () => Logger.logConsola.info(`Server ON. Port: ${PUERTO}`))
 
 io.on('connection', Controller.webSocket)

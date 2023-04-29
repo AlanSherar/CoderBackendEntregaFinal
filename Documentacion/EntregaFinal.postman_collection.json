@@ -1,0 +1,1016 @@
+{
+	"info": {
+		"_postman_id": "55926eef-160f-4e89-b5e3-bb16a4b25eef",
+		"name": "EntregaFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27166123"
+	},
+	"item": [
+		{
+			"name": "/productosApi",
+			"item": [
+				{
+					"name": "Crear uno / varios productos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Producto Postman\",\r\n    \"precio\": 10500,\r\n    \"thumbnail\": \"https://loremflickr.com/640/480\",\r\n    \"tags\": [\r\n        \"cocina\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Crear un producto / varios productos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Producto Postman\",\r\n    \"precio\": 10500,\r\n    \"thumbnail\": \"https://loremflickr.com/640/480\",\r\n    \"tags\": [\r\n        \"cocina\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productosApi",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productosApi"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "149"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"95-ZI9BNyG+r6+GI7wLwaOzPcgr2bA\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 20:59:43 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:49:43 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"titulo\": \"Producto Postman\",\n    \"precio\": 10500,\n    \"thumbnail\": \"https://loremflickr.com/640/480\",\n    \"tags\": [\n        \"cocina\"\n    ],\n    \"_id\": \"644d82e656762f63d46add01\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Recuperar todos los productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Recuperar todos los productos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productosApi",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productosApi"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "884"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"374-0On1dTY7ZLq7npbUZl3Urr4deBA\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:00:04 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:50:04 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"titulo\": \"Handcrafted Granite Towels\",\n        \"precio\": 9370,\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\n        \"tags\": [\n            \"deporte\"\n        ],\n        \"_id\": \"644d613a0fe707829994895e\"\n    },\n    {\n        \"titulo\": \"Awesome Frozen Car\",\n        \"precio\": 8771,\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\n        \"tags\": [\n            \"educacion\"\n        ],\n        \"_id\": \"644d613a0fe707829994895f\"\n    },\n    {\n        \"titulo\": \"Electronic Plastic Chicken\",\n        \"precio\": 4953,\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\n        \"tags\": [\n            \"casual\"\n        ],\n        \"_id\": \"644d613a0fe7078299948960\"\n    },\n    {\n        \"titulo\": \"Tasty Plastic Towels\",\n        \"precio\": 6148,\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\n        \"tags\": [\n            \"formal\"\n        ],\n        \"_id\": \"644d613a0fe7078299948961\"\n    },\n    {\n        \"titulo\": \"Intelligent Soft Mouse\",\n        \"precio\": 6552,\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\n        \"tags\": [\n            \"cocina\"\n        ],\n        \"_id\": \"644d613a0fe7078299948962\"\n    },\n    {\n        \"titulo\": \"Producto Postman\",\n        \"precio\": 10500,\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\n        \"tags\": [\n            \"cocina\"\n        ],\n        \"_id\": \"644d82e656762f63d46add01\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Recuperar un producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi/644d82e656762f63d46add01",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi",
+								"644d82e656762f63d46add01"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Recuperar un producto",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productosApi/644d82e656762f63d46add01",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productosApi",
+										"644d82e656762f63d46add01"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "141"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"8d-hni+SaA5ifydzhzrVH/YLwS1tgk\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:00:26 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:50:26 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"titulo\": \"Producto Postman\",\n    \"precio\": 10500,\n    \"thumbnail\": \"https://loremflickr.com/640/480\",\n    \"tags\": [\n        \"cocina\"\n    ],\n    \"_id\": \"644d82e656762f63d46add01\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar un producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"titulo\": \"Handcrafted Granite PUT POSTMAN\",\r\n        \"precio\": 1111,\r\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\r\n        \"tags\": [\r\n            \"deporte\"\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi/644d613a0fe707829994895e",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi",
+								"644d613a0fe707829994895e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Actualizar un producto",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"titulo\": \"Handcrafted Granite PUT POSTMAN\",\r\n        \"precio\": 1111,\r\n        \"thumbnail\": \"https://loremflickr.com/640/480\",\r\n        \"tags\": [\r\n            \"deporte\"\r\n        ]\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productosApi/644d613a0fe707829994895e",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productosApi",
+										"644d613a0fe707829994895e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "92"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"5c-XE4LqSKK8lMBgnDPfq7vp2yCSG8\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:01:20 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:51:20 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"modifiedCount\": 1,\n    \"upsertedId\": null,\n    \"upsertedCount\": 0,\n    \"matchedCount\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Recuperar el producto actualizado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi/644d613a0fe707829994895e",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi",
+								"644d613a0fe707829994895e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Recuperar el producto actualizado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productosApi/644d613a0fe707829994895e",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productosApi",
+										"644d613a0fe707829994895e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "156"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"9c-C7JmfzjRtL6bD87L4lAnXmx+7s8\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:01:42 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:51:42 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"titulo\": \"Handcrafted Granite PUT POSTMAN\",\n    \"precio\": 1111,\n    \"thumbnail\": \"https://loremflickr.com/640/480\",\n    \"tags\": [\n        \"deporte\"\n    ],\n    \"_id\": \"644d613a0fe707829994895e\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar un producto / varios / todos los productos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://alansitio.up.railway.app/productosApi/644d82e656762f63d46add01",
+							"protocol": "https",
+							"host": [
+								"alansitio",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"productosApi",
+								"644d82e656762f63d46add01"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar un producto / varios / todos los productos",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productosApi/",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productosApi",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "38"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE\""
+								},
+								{
+									"key": "set-cookie",
+									"value": "connect.sid=s%3AXQXexBBpmrGG3JYMt-bpiwUGzmnJx9A0.MDKHHIz2y8kty9aSKUwjl8FmuenrXhu8HYs%2FJN6qA18; Path=/; Expires=Sat, 29 Apr 2023 21:02:26 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 29 Apr 2023 20:52:26 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "/",
+			"item": [
+				{
+					"name": "signIn",
+					"item": [
+						{
+							"name": "Pagina de registro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/signin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear cuenta valida",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"entregaFinal@gmail.com\",\r\n    \"password\" : \"ASD\",\r\n    \"nombre\" : \"test\",\r\n    \"edad\" : 18\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/signin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear cuenta invalida",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"entregaFinal@gmail.com\",\r\n    \"password\" : \"ASD\",\r\n    \"nombre\" : \"test\",\r\n    \"edad\" : 18\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/signin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Al fallar el signin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/failSignin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"failSignin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "logIn",
+					"item": [
+						{
+							"name": "Pagina de logueo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/login",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Loguear cuenta valida",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"alan@gmail.com\",\r\n    \"password\": \"asd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/login",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Loguear cuenta invalida",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"entrega@gmail.com\",\r\n    \"password\": \"ASD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://alansitio.up.railway.app/login",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Al fallar el login",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/failLogin",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"failLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "index",
+					"item": [
+						{
+							"name": "Render index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "productos",
+					"item": [
+						{
+							"name": "Devuelve todos los productos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productos",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Devuelve productos segun filtro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productos/deporte,cocina",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productos",
+										"deporte,cocina"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "carrito",
+					"item": [
+						{
+							"name": "Devuelve el carrito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Añade producto al carrito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito/addProd/644d82e656762f63d46add01",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito",
+										"addProd",
+										"644d82e656762f63d46add01"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina producto del carrito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito/delProd/644d82e656762f63d46add01",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito",
+										"delProd",
+										"644d82e656762f63d46add01"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Realizar pedido de compra",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/carrito/comprar",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"carrito",
+										"comprar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "perfil",
+					"item": [
+						{
+							"name": "Informacion del usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/perfil",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"perfil"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "info",
+					"item": [
+						{
+							"name": "Informacion del server",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/info",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"info"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"item": [
+						{
+							"name": "Desloguear session activa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/logout",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://alansitio.up.railway.app"
+		}
+	]
+}
