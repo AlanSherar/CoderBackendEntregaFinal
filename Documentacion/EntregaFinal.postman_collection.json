@@ -220,7 +220,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://alansitio.up.railway.app/productos/:filtros",
+									"raw": "https://alansitio.up.railway.app/productos/filtros",
 									"protocol": "https",
 									"host": [
 										"alansitio",
@@ -230,13 +230,7 @@
 									],
 									"path": [
 										"productos",
-										":filtros"
-									],
-									"variable": [
-										{
-											"key": "filtros",
-											"value": null
-										}
+										"filtros"
 									]
 								}
 							},

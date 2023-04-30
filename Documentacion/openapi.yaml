@@ -113,6 +113,16 @@ paths:
           description: Successful response
           content:
             application/json: {}
+  /productos/filtros:
+    get:
+      tags:
+        - Router Base > productos
+      summary: Devuelve los filtros para productos
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
   /productos/{filtros}:
     get:
       tags:
