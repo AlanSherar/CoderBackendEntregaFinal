@@ -215,7 +215,7 @@
 							"response": []
 						},
 						{
-							"name": "Devuelve productos segun el filtro",
+							"name": "Devuelve los filtros para productos",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -239,6 +239,35 @@
 										}
 									]
 								}
+							},
+							"response": []
+						},
+						{
+							"name": "Devuelve productos segun el filtro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://alansitio.up.railway.app/productos/:filtros",
+									"protocol": "https",
+									"host": [
+										"alansitio",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"productos",
+										":filtros"
+									],
+									"variable": [
+										{
+											"key": "filtros",
+											"value": null
+										}
+									]
+								},
+								"description": "Para filtrar productos, en parametros requiere ingresar palabras claves separadas por coma.\n\nEjemplo:\n\n/productos/cocina,casual,barato"
 							},
 							"response": []
 						}

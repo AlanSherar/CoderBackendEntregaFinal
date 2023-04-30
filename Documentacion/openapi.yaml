@@ -118,6 +118,15 @@ paths:
       tags:
         - Router Base > productos
       summary: Devuelve productos segun el filtro
+      description: >-
+        Para filtrar productos, en parametros requiere ingresar palabras claves
+        separadas por coma.
+
+
+        Ejemplo:
+
+
+        /productos/cocina,casual,barato
       parameters:
         - name: filtros
           in: path
