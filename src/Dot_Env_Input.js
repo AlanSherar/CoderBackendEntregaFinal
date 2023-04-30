@@ -19,8 +19,8 @@ const { mode, port, debug, dao, _ } = yargs
   .argv
 
 export const DOT_ENV = {
-  PORT: port,
-  MODE: mode,
+  PORT: process.env.PORT || port,
+  MODE: process.env.MODE || mode,
   DEBUG: debug,
   DAO: dao
 }
