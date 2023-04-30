@@ -117,6 +117,9 @@ async function getProds(req, res) {
     Logger.logError.error(error)
   }
 }
+async function getFiltros(req, res){
+  res.json(await Service.getProdTags())
+}
 
 // get carrito
 async function getCarrito(req, res) {
@@ -173,6 +176,32 @@ async function getCarritoComprar(req, res){
     Logger.logError.error(error)
   }
 }
+async function putCarritoAddProd(req, res) {
+  try {
+    const userId = req.user.email
+    const { prodId } = req.params
+
+    const result = await Service.carritoAddProd(userId, prodId)
+
+    return res.json(result)
+    } catch (error) {
+    Logger.logError.error(error)
+  }
+}
+async function putCarritoDelProd(req, res) {
+  try {
+
+    const userId = req.user.email
+    const { prodId } = req.params
+
+    const result = await Service.carritoDelProd(userId, prodId)
+
+    return res.json(result)
+  } catch (error) {
+    Logger.logError.error(error)
+  }
+}
+
 
 // get perfil
 async function getPerfil(req, res) {
@@ -214,6 +243,7 @@ export const Controller = {
   getAny,
   webSocket,
   getProds,
+  getFiltros,
   getProdsApi,
   postProdsApi,
   putProdApi,
@@ -221,6 +251,8 @@ export const Controller = {
   getCarrito,
   getCarritoAddProd,
   getCarritoDelProd,
+  putCarritoAddProd,
+  putCarritoDelProd,
   getCarritoComprar,
   getPerfil
 

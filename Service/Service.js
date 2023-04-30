@@ -6,6 +6,7 @@ import { CarritosRepo } from "../Persistencia/Repository/CarritosRepository.js"
 import { gmailSender } from "../src/Nodemailer.js"
 import { mailerAuth } from "../Config/nodemailerEmail.js"
 import { Logger } from "../src/Logger.js"
+import { tagsFiltrables } from "../src/Faker.js"
 
 // const MensajesRepo = MensajesDAOFactory.getDAO()
 // const ProductosRepo = ProductosDAOFactory.getDAO()
@@ -46,6 +47,9 @@ async function getInfo(){
 }
 
 // Productos
+async function getProdTags(){
+  return tagsFiltrables
+}
 async function getProductosByTags(tags){
   const res = await Productos.getByTags(tags)
   return res
@@ -129,6 +133,7 @@ async function carritoComprar(carrito, user){
 
 export default {
   getInfo,
+  getProdTags,
   getProductos,
   guardarProductos,
   getAllMensajes,
