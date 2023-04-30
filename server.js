@@ -14,7 +14,7 @@ import { Controller } from "./Controller/controller.js"
 import swaggerUi from "swagger-ui-express"
 import { swaggerSpecs } from "./Config/documentacion.js"
 
-const PUERTO = process.env.PORT || DOT_ENV.PORT
+const PUERTO = DOT_ENV.PORT
 const app = express()
 const httpServer = new Server(app)
 
